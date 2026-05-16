@@ -1,0 +1,112 @@
+/* --- Base Reset & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1f1f1; /* The light gray background requested in the assignment */
+    color: #000;
+}
+
+/* This makes all headings use the Oswald font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* --- Header Styling --- */
+.header {
+    text-align: center;
+    padding: 40px 16px;
+    background-color: white;
+}
+
+.header h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.header .highlight {
+    background-color: #000;
+    color: #fff;
+    padding: 2px 8px;
+}
+
+/* --- Layout (Flexbox) --- */
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on mobile */
+}
+
+/* 65% width for the left side */
+.left-column {
+    flex: 65%;
+    padding: 0 16px;
+}
+
+/* 35% width for the right side */
+.right-column {
+    flex: 35%;
+    padding: 0 16px;
+}
+
+/* Responsive Rule: When the screen is small (like a phone), make both columns 100% wide so they stack */
+@media screen and (max-width: 800px) {
+    .left-column, .right-column {
+        flex: 100%;
+    }
+}/* --- Blog Post Cards --- */
+.card {
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Creates the shadow effect */
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.date {
+    color: #666;
+    font-weight: normal;
+}
+
+/* --- Card Footer (Button & Comments) --- */
+.card-footer {
+    display: flex;
+    justify-content: space-between; /* Pushes button left, comments right */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* The Read More Button */
+.btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ccc; /* Changes color when mouse hovers over it */
+}
+
+/* The Comments Counter */
+.badge {
+    background-color: #000;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
